@@ -4,6 +4,10 @@ import win32com.client as win32
 from pathlib import Path
 from controller import log_event
 from bulk import BulkExtractFilesVer2
+from examplefunc import (
+    ParsingKRaw,
+    QRawParsing
+)
 
 class ComsumMain:
 
@@ -19,14 +23,18 @@ class ComsumMain:
         """
         excel           = win32.DispatchEx("Excel.Application")
         n_poi           = 1
-        
+        temp_path       = Path("Folder_temp")
+        csum_path       = Path("compile_summary_path")
+        poi_list        = []
+        target_parent   = Path(json.load(open(json_path))["target_parent"])
+
         try:
             frex_path   = temp_path.glob("Formula_Rex*.xlsx")
             wb_csum         = excel.Workbooks.Open(str(csum_path), ReadOnly=False)
             wb_frex     = excel.Workbooks.Open(str(list(frex_path)[0]), ReadOnly=False)
             for poi in poi_list:
                 # ---- Parsing data Komdigi_Raw to Formula_Rex_V3
-                parsing_kraw.main_parsing(wb_frex, excel, target_parent, poi, wb_csum, n_poi)
+                ParsingKRaw().main_parsing(wb_frex, excel, target_parent, poi, wb_csum, n_poi)
                 n_poi += 1
         finally:
             wb_csum.Close(True)
@@ -34,6 +42,9 @@ class ComsumMain:
             del wb_csum, wb_frex, excel
 
     def main_qraw(self, json_path, qraw_event):
+        temp_ready = False
+        temp_ready = temp_ready if self.temp_path.exists() else False
+
         if qraw_event:
             src_path = "Komdigi_Raw_TBB_path"
             if not src_path.exists():
@@ -64,7 +75,7 @@ class ComsumMain:
                     # ---- export to csv
                     BulkExtractFilesVer2().extract_xlsm_ver2(src_path, temp_path, poi_list)
                     # ---- csv import to qraw template
-                    QRawParsing().etl_from_temp(method, poi_list, template_path, target_parent, temp_path)
+                    QRawParsing().etl_from_temp(method, poi_list, Path(template_path), target_parent, temp_path)
                     QRawParsing().clean_temp_path(temp_path)
     
     def map_plot_helper(self, ARCGISPY, json_path, parent_folder):
