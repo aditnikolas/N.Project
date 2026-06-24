@@ -67,11 +67,13 @@ The automation reduces repetitive manual work and helps improve consistency, pro
 
 ## Workflow
 
+![Workflow](screenshoots\Nproject_Workflow2.png)
+
 ```mermaid
 flowchart TD
     A[Drive Test Logfile] --> D[Input Preparation]
     B[Bulk XLSM from Measurement Tool] --> D
-    C[Generated Bulk XLSM] --> D
+    C[Individual XLSM] --> D
 
     D --> E[Batch Extraction]
     E --> F[Temporary SQLite Database]
