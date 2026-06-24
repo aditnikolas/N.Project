@@ -39,6 +39,12 @@ The automation reduces repetitive manual work and helps improve consistency, pro
 
 ---
 
+## Workflow
+
+![Workflow](screenshots/Nproject_Workflow2.png)
+---
+---
+
 ## Key Features
 
 * Batch extraction from measurement files
@@ -62,13 +68,6 @@ The automation reduces repetitive manual work and helps improve consistency, pro
 * Win32 COM Excel Automation
 * ArcGIS / ArcPy Integration
 * Tkinter GUI
-
----
-
-## Workflow
-
-![Workflow](screenshots/Nproject_Workflow2.png)
----
 
 ---
 
