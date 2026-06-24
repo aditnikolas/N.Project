@@ -76,7 +76,7 @@ The automation reduces repetitive manual work and helps improve consistency, pro
 
 ### UI Dashboard
 
-![UI Dashboard](screenshots/Nproject_Simple_UI.png)
+![UI Dashboard](screenshots\NProject_Simple_UI.png)
 
 ---
 
@@ -84,9 +84,13 @@ The automation reduces repetitive manual work and helps improve consistency, pro
 #### Bulk Process Log
 ![Processing Log](screenshots/Bulk.png)
 
-#### Compile Summary Log
+#### Compile Summary Process Log
 ![Processing Log](screenshots/CSum.png)
+
+#### Qos Raw Process Log
 ![Processing Log](screenshots/QRaw.png)
+
+#### Map Plot Process Log
 ![Processing Log](screenshots/Mplot.png)
 
 ---
