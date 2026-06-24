@@ -76,16 +76,18 @@ The automation reduces repetitive manual work and helps improve consistency, pro
 
 ### UI Dashboard
 
-![UI Dashboard](screenshots/Nproject_Workflow2.png)
+![UI Dashboard](screenshots/Nproject_Simple_UI.png)
 
 ---
 
 ### Processing Log
-
+#### Bulk Process Log
 ![Processing Log](screenshots/Bulk.png)
+
+#### Compile Summary Log
 ![Processing Log](screenshots/CSum.png)
 ![Processing Log](screenshots/QRaw.png)
-![Processing Log](screenshots/MPlot.png)
+![Processing Log](screenshots/Mplot.png)
 
 ---
 
