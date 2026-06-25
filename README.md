@@ -1,4 +1,4 @@
-# N.Project - Drive Test Data Processing Automation
+# N.Project (KomdigiAutomation)- Drive Test Data Processing Automation
 
 N.Project is a Python-based automation project built from scratch to process Drive Test measurement data accurately and efficiently.
 
