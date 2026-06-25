@@ -75,7 +75,7 @@ The automation reduces repetitive manual work and helps improve consistency, pro
 
 ### UI Dashboard
 
-![UI Dashboard](screenshots\NProject_Simple_UI.png)
+![UI Dashboard](screenshots/NProject_Simple_UI.png)
 
 ---
 
